@@ -4,7 +4,7 @@ import ShinyText from '../ShinyText';
 
 import foto1 from '../assets/foto1.jpeg';
 import foto2 from '../assets/foto2.jpeg';
-import foto3 from '../assets/foto3.jpeg';
+import foto6 from '../assets/foto6.jpeg';
 import foto4 from '../assets/foto4.jpeg';
 // import foto5 from '../assets/foto5.jpeg';
   
@@ -25,14 +25,14 @@ const items = [
     url: "#"
   },
   {
-    image: foto3,
+    image: foto4,
     title: "Zerxy O Brien",
     borderColor: "#F59E0B",
     gradient: "linear-gradient(200deg, #F59E0B, #000)",
     url: "#"
   },
   {
-    image: foto4,
+    image: foto6,
     title: "Zerxy O Brien",
     borderColor: "#EF4444",
     gradient: "linear-gradient(210deg, #EF4444, #000)",
