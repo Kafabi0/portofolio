@@ -33,7 +33,7 @@ export default function Hero() {
         />
         <BlurText
           text={"Kafabi Aulia Fasyah"}
-          className="text-5xl font-bold mb-4 text-blue-400"
+          className="text-3xl font-bold mb-4 text-blue-400"
           delay={300}
           animateBy="chars"
           direction="top"
