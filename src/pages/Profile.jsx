@@ -8,6 +8,7 @@ export default function Profile() {
     <div className="p-10">
             <h1 className="text-3xl font-bold">Halaman Profil</h1>
       <p>Selamat datang di halaman profil.</p>
+      <div className='flex justify-center items-center'>
 <ProfileCard
   name="Kafabi Aulia Fasyah"
   title="Software Engineer"
@@ -18,7 +19,7 @@ export default function Profile() {
   enableTilt={true}
   onContactClick={() => console.log('Contact clicked')}
 />
-
+</div>
     </div>
   );
 }
