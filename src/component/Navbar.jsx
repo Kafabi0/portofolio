@@ -1,17 +1,26 @@
 'use client';
 import { useState } from "react";
+import { useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
 
   const toggleMenu = () => setIsOpen(!isOpen);
+
+  // Deteksi apakah sedang di halaman beranda
+  const isHome = location.pathname === "/" || location.hash === "#beranda";
 
   const navLinks = [
     { href: "/#beranda", label: "Beranda" },
     { href: "/about", label: "Tentang" },
-    { href: "/#projects", label: "Proyek", hideOnMobile: true },
-    { href: "/#contact", label: "Kontak", hideOnMobile: true },
+    ...(isHome
+      ? [
+          { href: "/#projects", label: "Proyek", hideOnMobile: true },
+          { href: "/#contact", label: "Kontak", hideOnMobile: true },
+        ]
+      : []),
     { href: "/Profile", label: "Profil" },
     { href: "/Galerry", label: "Galeri" },
   ];
@@ -19,16 +28,12 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 w-full bg-white/80 backdrop-blur-md shadow-md z-50">
       <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-        {/* Logo */}
         <h1 className="text-xl font-bold text-blue-500">Portofolio Zerxy</h1>
 
         {/* Desktop Menu */}
         <ul className="hidden sm:flex gap-6 text-gray-700 font-medium">
           {navLinks.map((link) => (
-            <li
-              key={link.href}
-              className={link.hideOnMobile ? "" : ""}
-            >
+            <li key={link.href}>
               <a href={link.href} className="hover:text-blue-500 transition duration-200">
                 {link.label}
               </a>
@@ -47,7 +52,7 @@ export default function Navbar() {
         <div className="md:hidden px-6 pb-4">
           <ul className="flex flex-col gap-4 text-gray-700 font-medium">
             {navLinks
-              .filter((link) => !link.hideOnMobile) // Sembunyikan jika `hideOnMobile === true`
+              .filter((link) => !link.hideOnMobile)
               .map((link) => (
                 <li key={link.href}>
                   <a
