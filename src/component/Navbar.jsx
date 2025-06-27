@@ -8,11 +8,12 @@ export default function Navbar() {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   const navLinks = [
-    { href: "/#hero", label: "Beranda" },
-    { href: "/#about", label: "Tentang" },
+    { href: "/#beranda", label: "Beranda" },
+    { href: "/About", label: "Tentang" },
     { href: "/#projects", label: "Proyek" },
     { href: "/#contact", label: "Kontak" },
     { href: "/Profile", label: "Profil" },
+    { href: "/Galerry", label: "Galeri" },
 
   ];
 
