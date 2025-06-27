@@ -14,7 +14,7 @@ function App() {
       <main className="pt-20">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/About" element={<About />} />
+          <Route path="/about" element={<About />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/Galerry" element={<Galerry />} />
         </Routes>

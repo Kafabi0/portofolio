@@ -9,7 +9,7 @@ export default function Navbar() {
 
   const navLinks = [
     { href: "/#beranda", label: "Beranda" },
-    { href: "/About", label: "Tentang" },
+    { href: "/about", label: "Tentang" },
     { href: "/#projects", label: "Proyek" },
     { href: "/#contact", label: "Kontak" },
     { href: "/Profile", label: "Profil" },
