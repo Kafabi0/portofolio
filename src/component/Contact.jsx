@@ -15,7 +15,7 @@ export default function Contact() {
           pauseOnHover={true}
           loop={true}
         >
-          {/* Slide Email (Gmail) */}
+          {/* Slide Gmail */}
           <div className="flex flex-col items-center justify-center h-[250px] w-full rounded-lg bg-black shadow-md text-white">
             <p className="text-lg mb-2 font-medium">Hubungi saya melalui email:</p>
             <a
@@ -42,6 +42,9 @@ export default function Contact() {
           </div>
         </Carousel>
       </div>
+
+      {/* Posisi 2025 di bawah carousel dan di tengah */}
+      <p className="text-center mt-6 text-gray-600">2025</p>
     </section>
   );
 }
