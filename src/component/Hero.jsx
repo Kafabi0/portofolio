@@ -29,7 +29,7 @@ export default function Hero() {
 
       {/* Konten Tengah */}
       <div className="flex flex-col items-center justify-center px-6 py-10 text-center ">
-      <div className="absolute top-4 right-4 hidden sm:block z-50">
+      <div className="absolute top-4 right-4 hidden sm:block">
         <Lanyard />
       </div>
         <BlurText
