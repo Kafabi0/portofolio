@@ -3,6 +3,7 @@ import SplashCursor from "../splashcursor";
 import Aurora from "../Aurora";
 import RotatingText from '../RotatingText';
 import FadeContent from '../FadeContent';
+import Lanyard from "../Lanyard";
 
 export default function Hero() {
   return (
@@ -28,6 +29,9 @@ export default function Hero() {
 
       {/* Konten Tengah */}
       <div className="flex flex-col items-center justify-center px-6 py-10 text-center ">
+      <div className="absolute top-4 right-4">
+        <Lanyard />
+      </div>
         <BlurText
           text={"Halo, Saya "}
           className="text-5xl font-bold mb-2"

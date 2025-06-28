@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import Lanyard from "../Lanyard";
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
@@ -27,7 +27,7 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 w-full bg-white/80 backdrop-blur-md shadow-md z-50">
-      <div className="absolute top-4 right-4 z-1000">
+      <div className="absolute top-4 right-4 z-50">
         <Lanyard />
       </div>
       <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
