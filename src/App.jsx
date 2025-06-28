@@ -3,7 +3,6 @@ import Navbar from "./component/Navbar";
 import Home from "./pages/Home";
 import Profile from "./pages/Profile";
 import About from "./pages/About";
-
 import "./index.css";
 import Galerry from './pages/Galerry';
 

@@ -1,16 +1,17 @@
 import BlurText from "../BlurText";
 import SplashCursor from "../splashcursor";
 import Aurora from "../Aurora";
-import RotatingText from '../RotatingText'
-import FadeContent from '../FadeContent'
+import RotatingText from '../RotatingText';
+import FadeContent from '../FadeContent';
+
 export default function Hero() {
   return (
     <section
       id="beranda"
       className="relative min-h-screen flex items-center justify-center text-white bg-gradient-to-b from-gray-900 to-black overflow-hidden"
     >
-      {/* Background Aurora */}
-      <div className="absolute inset-0 -z-10">
+      {/* Aurora Background */}
+      <div className="absolute inset-0 ">
         <Aurora
           colorStops={["#3A29FF", "#FF94B4", "#FF3232"]}
           blend={0.5}
@@ -18,12 +19,15 @@ export default function Hero() {
           speed={0.5}
         />
       </div>
-      
+
+      {/* Lanyard di kanan atas */}
+
+
       {/* Splash Cursor */}
       <SplashCursor />
 
       {/* Konten Tengah */}
-      <div className="flex flex-col items-center justify-center px-6 py-10 text-center">
+      <div className="flex flex-col items-center justify-center px-6 py-10 text-center ">
         <BlurText
           text={"Halo, Saya "}
           className="text-5xl font-bold mb-2"
@@ -47,11 +51,11 @@ export default function Hero() {
         />
         <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
           <div className="flex items-center gap-2">
-              <span className="text-white text-lg sm:text-xl md:text-2xl font-semibold">
+            <span className="text-white text-lg sm:text-xl md:text-2xl font-semibold">
               Jago dalam
             </span>
             <RotatingText
-              texts={['Berpikir','Bermain','Belajar','Semua']}
+              texts={['Berpikir', 'Bermain', 'Belajar', 'Semua']}
               mainClassName="px-2 sm:px-2 md:px-3 bg-blue-400 text-black overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
               staggerFrom="last"
               initial={{ y: "100%" }}
