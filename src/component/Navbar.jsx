@@ -2,6 +2,14 @@
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+   AOS.init({
+      //memanggil aos
+      duration: 1000,
+      delay: 300,
+    });
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,7 +34,9 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-white/80 backdrop-blur-md shadow-md z-100">
+    <nav className="fixed top-0 left-0 w-full bg-white/80 backdrop-blur-md shadow-md z-100"
+    data-aos="fade-right"
+    duration="2000">
       <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
         <h1 className="text-xl font-bold text-blue-500">SiKaFa</h1>
 

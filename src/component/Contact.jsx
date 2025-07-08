@@ -1,10 +1,18 @@
 import { Instagram } from "lucide-react";
 import { SiGmail } from "react-icons/si";
 import Carousel from '../Carousel';
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+   AOS.init({
+      //memanggil aos
+      duration: 1000,
+      delay: 300,
+    });
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-20 px-6 bg-white">
+    <section id="contact" className="py-20 px-6 bg-white"  data-aos="fade-up" duration="3000">
       <h2 className="text-3xl font-semibold mb-10 text-center">Kontak</h2>
 
       <div className="flex justify-center items-center" style={{ height: '300px' }}>

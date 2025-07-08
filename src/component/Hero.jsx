@@ -4,15 +4,27 @@ import Aurora from "../Aurora";
 import RotatingText from '../RotatingText';
 import FadeContent from '../FadeContent';
 import Lanyard from "../Lanyard";
+import AOS from "aos";
+import "aos/dist/aos.css";
+   AOS.init({
+      //memanggil aos
+      duration: 1000,
+      delay: 300,
+    });
 
 export default function Hero() {
   return (
     <section
       id="beranda"
       className="relative min-h-screen flex items-center justify-center text-white bg-gradient-to-b from-gray-900 to-black overflow-hidden"
+      data-aos="fade-zoom-in"
+      data-aos-easing="ease-in-back"
+      data-aos-delay="500"
+      data-aos-offset="0"
+
     >
       {/* Aurora Background */}
-      <div className="absolute inset-0 ">
+      <div className="absolute inset-0 " >
         <Aurora
           colorStops={["#3A29FF", "#FF94B4", "#FF3232"]}
           blend={0.5}
