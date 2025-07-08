@@ -24,7 +24,7 @@ export default function Projects() {
 
       {/* Wrapper agar Stepper berada di tengah */}
       <div className="flex justify-center  z-50"
-      data-aos="fade-left"
+      data-aos="fade-right"
       duration="3000">
         <div className="w-full max-w-2xl  z-50">
           <Stepper
